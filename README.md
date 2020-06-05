@@ -31,26 +31,89 @@ print("""                ********
 #.#..#....#..##.#..#....#..##.#..#....#..#    #----------#
 ##########################################    ############""")
 ```
-### 【深基2.例5】苹果采购
+### P5703	【深基2.例5】苹果采购
 ```python
 a , b = map(int,input().split())
 print (a * b)
 ```
-### 【深基2.例6】字母转换
+### P5704	【深基2.例6】字母转换
 ```python
 letter = input()
 letter = letter.capitalize()
 print (letter)
 
 ```
-### 【深基2.例7】数字反转
+### P5705	【深基2.例7】数字反转
 ```python
 print(float(input()[::-1]))
 
 ```
-### 【深基2.例8】再分肥宅水
+### P5706	【深基2.例8】再分肥宅水
 ```python
 t,n=map(float,input().split())
 print ("%.3f\n%d"%(((t/n),2*n)))
 
+```
+### P1425	小鱼的游泳时间
+```python
+a, b, c, d = map(int, input().split())
+m,h=60-b+d,c-a-1
+if m>= 60:
+    h,m=h+1,m-60
+print("%d %d"%(h,m))
+
+```
+### P2433	【深基1-2】小学数学 N 合一
+```python
+N =int(input())
+if N ==1:
+    print ("I love Luogu!")
+elif N ==2:
+    print ("%d %d"%(2+4,10-2-4))
+elif N ==3:
+    print ("%d\n%d\n%d"%(14//4,14//4*4,14%3))
+elif N ==4:
+    print ("%6.3f"%(500/3))
+elif N ==5:
+    print ("%d"%((260+220)/(12+20)))
+elif N ==6:
+    print ("%.4f"%((6**2+9**2)**0.5))
+elif N ==7:
+    print ("%d\n%d\n%d"%(100+10,110-20,0))
+elif N ==8:
+    print ("%6.4f\n%6.4f\n%6.3f\n"%(2*3.141593*5,3.141593*5**2,3.141593*4/3*5**3))
+elif N ==9:
+    print ((((((1+1)*2)+1)*2)+1)*2)
+elif N ==10:
+    print (9)
+elif N ==11:
+    print ("33.3333")
+elif N ==12:
+    print ("%d\n%c"%((ord('M')-ord('A')+1,18+ord('A')-1)))
+elif N ==13:
+    print ('%d'%(((4**3+10**3)*3.141593*4/3)**(1/3)))
+elif N ==14:
+    print(50)
+
+```
+### P5708 【深基2.习2】三角形面积
+```python
+a,b,c =map(float,input().split())
+p=(a+b+c)/2
+print ("%.1f"%((p*(p-a)*(p-b)*(p-c))**0.5))
+```
+### P1421	小玉买文具
+```python
+a,b = map(str,input().split())
+print (int(float(a + "." + b)//1.9))
+```
+### P5709 【深基2.习6】Apples Prologue
+```python
+m,t,s = map (int,input().split())
+print (0 if m-s//t-1<0 else (m-s//t if s%t == 0 else m-s//t-1))
+```
+### P2181	对角线
+```python
+n= int(input())
+print (n*(n-1)*(n-2)*(n-3)//24)
 ```
