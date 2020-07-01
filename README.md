@@ -273,3 +273,99 @@ number = sorted(list(map(int,input().split())))
 strlist = str(input())
 print ('%d %d %d'%(number[ord(strlist[0])-65],number[ord(strlist[1])-65],number[ord(strlist[2])-65]))
 ```
+## 【入门3】循环结构
+### P5718 【深基4.例2】找最小值
+```python
+n= int(input());mintemp = 0
+minlist = list(map(int,input().split()))
+minlist.sort()
+print(minlist[0])
+```
+### P5719 【深基4.例3】分类平均
+```python
+n,k = map(int,input().split());zc=[];fzc=[];sumzc=sumfzc= 0
+for temp in range(1,n+1):
+    if temp % k == 0:
+        zc.append(temp)
+    else:
+        fzc.append(temp)
+for temp in range(0,len(zc)):
+    sumzc += zc[temp]
+for temp in range(0,len(fzc)):
+    sumfzc += fzc[temp]
+print ("%.1f %.1f"%(sumzc/len(zc),sumfzc/len(fzc)))
+```
+### P5720 【深基4.例4】一尺之棰
+```python
+n = int(input());i = 0
+while n >= 1:
+    n //= 2
+    i += 1
+print(i)
+```
+### P5721 【深基4.例6】数字直角三角形
+```python
+n = int(input());sumtemp = 1
+for temp in range(n,0,-1):
+    for i in range(0,temp):
+        print('%02d'%sumtemp,end='')
+        sumtemp += 1
+    print("\n",end='')
+```
+### P1009 阶乘之和
+```python
+n = int(input());cheng=sum= 1
+for temp in range(2,n+1):
+    cheng *= temp
+    sum += cheng
+print(sum)
+```
+### P1980 计数问题
+```python
+n,x= map(int,input().split())
+time = 0
+for temp in range(1,n+1):
+    time += str(temp).count(str(x))
+print(time)
+```
+### P1035 级数求和
+```python
+K = int(input());n = 0;S = 0
+while S <= K:
+    n += 1
+    S = S + 1/n
+print (n)
+```
+### P2669 金币
+```python
+day = int(input());money=[1];summoney = 1
+for temp in range(2,day + 1):
+    if len(money) <= day:
+        money += [temp] * temp
+    summoney += money[temp-1]
+print (summoney)
+```
+### P5722 【深基4.例11】数列求和
+```python
+N = int(input());S = 0
+for temp in range (1,N+1):
+    S = S + temp
+print (S)
+```
+### P5723 【深基4.例13】质数口袋
+```python
+n = int(input());alist = [0,0]+[1 for i in range(2,n+1)];sum = 0;time = -1
+if n != 1:
+    for temp in range(0,n+1):
+        if alist[temp]:
+            i,sum,time= temp * 2,sum + temp,time + 1
+            if sum > n:
+                print(time)
+                break
+            else:
+                print(temp)
+            while i <= n:
+                alist[i],i = 0,i + temp
+else:
+    print(0)
+```
